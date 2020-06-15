@@ -1,0 +1,31 @@
+function towerBuilder(nFloors) {
+   var a=nFloors,ar= [],ar1=[], b=0;
+
+          for(i=0;i<a*2;i++)
+          {
+            if(i%2 !=0)
+            {
+              ar.push(i);
+            }
+          }
+          b=Math.floor(ar[a-2]/2);
+          for(i=0;i<a;i++,b--)
+          {
+            var k="";
+            for ( var s = 0; s <=b ; ++s)
+             {
+               k=k+" ";
+             }
+            for(j=0;j<ar[i];j++)
+            {
+             k=k+"*"
+            }
+            for ( var s = 0; s <=b ; ++s)
+             {
+               k=k+" ";
+             }
+            ar1.push(k);
+           
+          }
+          return ar1;
+}
